@@ -1,9 +1,12 @@
 import React from "react";
 
+import Board from "../../components/Board";
+
 const Play = () => {
 	return (
 		<div>
-			<h1>Play</h1>
+			<h1>SOUNDLE</h1>
+			<Board />
 		</div>
 	);
 };

@@ -66,7 +66,7 @@
 
 - 🌌 [GitHub](https://github.com/sanjayMamidipaka "Sanjay Mamidipaka")
 
-**Sarthak Mohanty**
+**Ryan O'Meara**
 
 - 🌌 [GitHub](https://github.com/ryan-omeara "Ryan O'Meara")
 

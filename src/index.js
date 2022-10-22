@@ -4,6 +4,7 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from "./pages/Home";
 import Play from "./pages/Play";
@@ -11,12 +12,14 @@ import Play from "./pages/Play";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
-		<Router>
-			<Routes>
-				<Route exact path="/" element={<Home />} />
-				<Route exact path="/play" element={<Play />} />
-			</Routes>
-		</Router>
+		<div className="wrapper bg-dark text-light">
+			<Router>
+				<Routes>
+					<Route exact path="/" element={<Home />} />
+					<Route exact path="/play" element={<Play />} />
+				</Routes>
+			</Router>
+		</div>
 	</React.StrictMode>
 );
 
