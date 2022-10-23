@@ -1,10 +1,12 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
-import "./index.css";
+import { Col, Container, Row, Input } from "reactstrap";
+import "./DynamicIsland.css";
 import "../../fonts/AlmaMono-Regular.otf";
 
 const DynamicIsland = (props) => {
 	const [width, setWidth] = useState(1);
+	const [disable, setDisable] = useState(false);
 
 	const changeHandler = (e) => {
 		setWidth(e.target.value.length > 0 ? e.target.value.length : 1);
@@ -15,6 +17,7 @@ const DynamicIsland = (props) => {
 	const enterHandler = (e) => {
 		if (e.key === "Enter" && e.target.value.trim().length > 0) {
 			props.enterPressed(true);
+			setDisable(true);
 		} else if (e.key === "Enter" && e.target.value.trim().length === 0) {
 			setWidth(1);
 			inputRef.current.value = "";
@@ -24,6 +27,7 @@ const DynamicIsland = (props) => {
 	return (
 		<input
 			ref={inputRef}
+			disabled={disable}
 			style={{ width: width + "ch" }}
 			type="text"
 			autoFocus
