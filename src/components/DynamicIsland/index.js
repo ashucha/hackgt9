@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
+import { motion } from "framer-motion";
+
 import "./index.css";
 import "../../fonts/AlmaMono-Regular.otf";
 
@@ -46,7 +48,10 @@ const DynamicIsland = (props) => {
 	};
 
 	return (
-		<div>
+		<motion.div
+			animate={{ x: props.move ? 10 : 0 }}
+			transition={{ type: "spring", bounce: 2 }}
+		>
 			<input
 				ref={inputRef}
 				disabled={disable}
@@ -59,7 +64,7 @@ const DynamicIsland = (props) => {
 				className="rounded-0 bg-dark"
 				value={guess}
 			/>
-		</div>
+		</motion.div>
 	);
 };
 

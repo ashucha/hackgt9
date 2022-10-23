@@ -76,6 +76,8 @@ const Board = (props) => {
 		"FIREWORK",
 	];
 
+	const [move, setMove] = useState(false);
+
 	const enterHandler = (data) => {
 		if (data.guess.toUpperCase() === answers[randomIndex]) {
 			alert("Correct");
@@ -84,6 +86,7 @@ const Board = (props) => {
 				setNumGuesses(numGuesses + 1);
 				setCurrentSong(currentSongArray[index + 1]);
 				setIndex(index + 1);
+				setMove(!move);
 			} else if (numGuesses === 6) {
 				alert("Sorry, you lost. Better luck next time!");
 			}
@@ -96,6 +99,8 @@ const Board = (props) => {
 				<DynamicIsland
 					enterPressed={enterHandler}
 					typedCharData={props.typedCharData}
+					move={move}
+					setMove={setMove}
 				/>
 			)}
 			<div>
