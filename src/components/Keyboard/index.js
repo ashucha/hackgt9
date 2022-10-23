@@ -105,7 +105,7 @@ const Keyboard = (props) => {
 								height="24"
 								viewBox="0 0 24 24"
 								width="24"
-								class="game-icon"
+								className="game-icon"
 								data-testid="icon-backspace"
 							>
 								<path

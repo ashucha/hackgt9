@@ -15,7 +15,7 @@ const DynamicIsland = (props) => {
 
 	const enterHandler = (e) => {
 		if (e.key === "Enter" && e.target.value.trim().length > 0) {
-			props.enterPressed(true);
+			props.enterPressed({enterPressed: true, guess: e.target.value.trim()});
 			setDisable(true);
 		} else if (e.key === "Enter" && e.target.value.trim().length === 0) {
 			setWidth(1);
