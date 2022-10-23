@@ -1,0 +1,14 @@
+.navbar {
+	width: 100%;
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	justify-content: space-evenly !important;
+	border-bottom: 2px solid white;
+}
+
+.navbar-brand {
+	font-weight: 700;
+	text-align: right;
+	font-size: x-large;
+}
