@@ -8,7 +8,6 @@ const Play = () => {
 
 	const getKeyData = (data) => {
 		if (data) {
-			// console.log(data);
 			setOnscreenInputData(data);
 		}
 	};

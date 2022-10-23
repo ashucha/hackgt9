@@ -69,12 +69,10 @@ const Board = (props) => {
 	const [numGuesses, setNumGuesses] = useState(1);
 	const [index, setIndex] = useState(0);
 	const [currentSong, setCurrentSong] = useState(currentSongArray[index]);
-	const answers = [
-		"WALK IT LIKE I TALK IT",
-		"FLASHING LIGHTS",
-		"AFRICA",
-		"FIREWORK",
-	];
+  
+	const answers = ['WALK IT LIKE I TALK IT', 'FLASHING LIGHTS', 'AFRICA', 'FIREWORK']
+
+	const [move, setMove] = useState(false);
 
 	const enterHandler = (data) => {
 		if (data.guess.toUpperCase() === answers[randomIndex]) {
@@ -82,8 +80,9 @@ const Board = (props) => {
 		} else {
 			if (numGuesses < 6) {
 				setNumGuesses(numGuesses + 1);
-				setCurrentSong(currentSongArray[index + 1]);
-				setIndex(index + 1);
+				setCurrentSong(currentSongArray[index+1]);
+				setIndex(index+1)
+				setMove(!move);
 			} else if (numGuesses === 6) {
 				alert("Sorry, you lost. Better luck next time!");
 			}
@@ -92,12 +91,7 @@ const Board = (props) => {
 
 	return (
 		<div className="island-container">
-			{Array(numGuesses).fill(
-				<DynamicIsland
-					enterPressed={enterHandler}
-					typedCharData={props.typedCharData}
-				/>
-			)}
+			{Array(numGuesses).fill(<DynamicIsland enterPressed={enterHandler} move={move} setMove={setMove}/>)}
 			<div>
 				<audio src={currentSong} controls></audio>
 			</div>
