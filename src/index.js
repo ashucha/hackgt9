@@ -16,7 +16,7 @@ root.render(
 	<React.StrictMode>
 		<div className="wrapper bg-dark text-light">
 			<Navbar />
-			<Router>
+			<Router basename="/hackgt9">
 				<Routes>
 					<Route exact path="/" element={<Home />} />
 				</Routes>
