@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./index.css";
 import DynamicIsland from "../DynamicIsland";
 
-const Board = () => {
+const Board = (props) => {
 	const [numGuesses, setNumGuesses] = useState(1);
 
 	const enterHandler = (data) => {
@@ -16,7 +16,13 @@ const Board = () => {
 
 	return (
 		<div className="island-container">
-			{Array(numGuesses).fill(<DynamicIsland enterPressed={enterHandler} />)}
+			{Array(numGuesses).fill(
+				<DynamicIsland
+					enterPressed={enterHandler}
+					typedChar={props.typedChar}
+					timestamp={props.timestamp}
+				/>
+			)}
 		</div>
 	);
 };

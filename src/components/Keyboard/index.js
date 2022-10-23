@@ -7,6 +7,7 @@ import "./index.css";
 const Keyboard = (props) => {
 	const handleClick = (e) => {
 		props.keyPressed(e.target.innerText);
+		props.timestamp(Date.now());
 	};
 
 	return (
@@ -105,7 +106,7 @@ const Keyboard = (props) => {
 								height="24"
 								viewBox="0 0 24 24"
 								width="24"
-								class="game-icon"
+								className="game-icon"
 								data-testid="icon-backspace"
 							>
 								<path
