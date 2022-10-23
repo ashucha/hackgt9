@@ -1,0 +1,13 @@
+input, input:focus {
+  font-family: Courier;
+  padding: 0 !important;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+  color: white !important;
+  font-size: 2rem;
+  text-transform: uppercase;
+  overflow-x: scroll;
+  display: inline-block;
+  font-weight: 700;
+}
