@@ -6,8 +6,7 @@ import "./index.css";
 
 const Keyboard = (props) => {
 	const handleClick = (e) => {
-		props.keyPressed(e.target.innerText);
-		props.timestamp(Date.now());
+		props.keyPressed({ newChar: e.target.innerText, time: Date.now() });
 	};
 
 	return (

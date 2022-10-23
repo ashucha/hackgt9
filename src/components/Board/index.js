@@ -19,8 +19,7 @@ const Board = (props) => {
 			{Array(numGuesses).fill(
 				<DynamicIsland
 					enterPressed={enterHandler}
-					typedChar={props.typedChar}
-					timestamp={props.timestamp}
+					typedCharData={props.typedCharData}
 				/>
 			)}
 		</div>

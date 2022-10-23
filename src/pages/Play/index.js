@@ -4,22 +4,20 @@ import Board from "../../components/Board";
 import Keyboard from "../../components/Keyboard";
 
 const Play = () => {
-	const [onscreenInput, setOnscreenInput] = useState("");
-	const [timestamp, setTimestamp] = useState(null);
+	const [onscreenInputData, setOnscreenInputData] = useState(null);
 
-	const getKey = (data) => {
-		setOnscreenInput(data);
-	};
-
-	const getTimestamp = (ts) => {
-		setTimestamp(ts);
+	const getKeyData = (data) => {
+		if (data) {
+			// console.log(data);
+			setOnscreenInputData(data);
+		}
 	};
 
 	return (
 		<div>
 			<h1>SOUNDLE</h1>
-			<Board typedChar={onscreenInput} timestamp={timestamp} />
-			<Keyboard keyPressed={getKey} timestamp={getTimestamp} />
+			<Board typedCharData={onscreenInputData} />
+			<Keyboard keyPressed={getKeyData} />
 		</div>
 	);
 };

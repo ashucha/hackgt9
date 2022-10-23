@@ -8,16 +8,21 @@ const DynamicIsland = (props) => {
 	const [disable, setDisable] = useState(false);
 	const [guess, setGuess] = useState("");
 
-	const inputRef = useRef(null);
+	const inputRef = useRef(guess);
 
 	useEffect(() => {
-		setGuess(guess + props.typedChar);
-		inputRef.current.value = guess;
-	}, [props.timestamp]);
+		if (!disable && props.typedCharData) {
+			inputRef.current.value = guess + props.typedCharData.newChar;
+			setGuess(guess + props.typedCharData.newChar);
+			inputRef.current.focus();
+			setWidth(guess.length > 0 ? width + 1 : 1);
+		}
+	}, [props.typedCharData]);
 
 	const changeHandler = (e) => {
 		setGuess(e.target.value.toUpperCase());
 		setWidth(e.target.value.length > 0 ? e.target.value.length : 1);
+		inputRef.current.focus();
 	};
 
 	const enterHandler = (e) => {
@@ -27,8 +32,11 @@ const DynamicIsland = (props) => {
 		}
 
 		if (e.key === "Enter" && e.target.value.trim().length > 0) {
-			props.enterPressed(true);
 			setDisable(true);
+			if (props.typedCharData) {
+				props.typedCharData.newChar = "";
+			}
+			props.enterPressed(true);
 		} else if (e.key === "Enter" && e.target.value.trim().length === 0) {
 			setWidth(1);
 			inputRef.current.value = "";
@@ -38,7 +46,6 @@ const DynamicIsland = (props) => {
 
 	return (
 		<div>
-			{guess}
 			<input
 				ref={inputRef}
 				disabled={disable}
