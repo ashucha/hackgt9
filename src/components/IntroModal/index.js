@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	Button,
 	Modal,
@@ -7,13 +7,24 @@ import {
 	ModalFooter,
 	Badge,
 } from "reactstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 
 function IntroModal(args) {
+	const [modal, setModal] = useState(true);
+
+	const toggle = () => setModal(!modal);
+
 	return (
 		<div>
-			<Modal className="text-light" {...args}>
-				<ModalHeader className="bg-dark">How to Play</ModalHeader>
+			<Button onClick={toggle}>
+				<FontAwesomeIcon icon={faInfoCircle} size={50} />
+			</Button>
+			<Modal className="text-light" isOpen={modal} toggle={toggle} {...args}>
+				<ModalHeader className="bg-dark" toggle={toggle}>
+					How to Play
+				</ModalHeader>
 				<ModalBody className="bg-dark">
 					We give you different pieces of a song, you have 6 guesses to guess
 					the name of the song.
@@ -43,7 +54,9 @@ function IntroModal(args) {
 					</div>
 				</ModalBody>
 				<ModalFooter className="bg-dark">
-					<Button color="primary">Let's Play!</Button>
+					<Button color="primary" onClick={toggle}>
+						Let's Play!
+					</Button>{" "}
 				</ModalFooter>
 			</Modal>
 		</div>
