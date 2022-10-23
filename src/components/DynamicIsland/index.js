@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-import "./DynamicIsland.css";
+import "./index.css";
 import "../../fonts/AlmaMono-Regular.otf";
 
 const DynamicIsland = (props) => {
