@@ -6,17 +6,19 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import Navbar from "./components/NavBar";
 import Home from "./pages/Home";
-import Play from "./pages/Play";
+
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
 		<div className="wrapper bg-dark text-light">
+			<Navbar />
 			<Router>
 				<Routes>
 					<Route exact path="/" element={<Home />} />
-					<Route exact path="/play" element={<Play />} />
 				</Routes>
 			</Router>
 		</div>
