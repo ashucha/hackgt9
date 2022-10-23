@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
-import { Col, Container, Row, Input } from "reactstrap";
 import "./DynamicIsland.css";
 import "../../fonts/AlmaMono-Regular.otf";
 
