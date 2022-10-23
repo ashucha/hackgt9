@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/hackgt9/static/css/main.2ae93dbc.css",
+    "main.js": "/hackgt9/static/js/main.4b262158.js",
+    "static/js/787.e7b55d14.chunk.js": "/hackgt9/static/js/787.e7b55d14.chunk.js",
+    "static/media/africaOther.wav": "/hackgt9/static/media/africaOther.e457a92ce1ce35a3dea7.wav",
+    "static/media/africaVocals.wav": "/hackgt9/static/media/africaVocals.a2478270dcb864903035.wav",
+    "static/media/fireworkOther.wav": "/hackgt9/static/media/fireworkOther.f03366e73c976953075e.wav",
+    "static/media/fireworkVocals.wav": "/hackgt9/static/media/fireworkVocals.61237101b633eced5e14.wav",
+    "static/media/flashOther.wav": "/hackgt9/static/media/flashOther.776ff000328a1c5ee601.wav",
+    "static/media/flashVocals.wav": "/hackgt9/static/media/flashVocals.599832976566e318bb3e.wav",
+    "static/media/migosOther.wav": "/hackgt9/static/media/migosOther.345fa0c01c0a9d31c646.wav",
+    "static/media/migosVocals.wav": "/hackgt9/static/media/migosVocals.1e9194674b5f989cdaf6.wav",
+    "static/media/africaPitch.wav": "/hackgt9/static/media/africaPitch.e94886ebe3750661b3e0.wav",
+    "static/media/fireworkPitch.wav": "/hackgt9/static/media/fireworkPitch.7fd0cfe3db431fb90620.wav",
+    "static/media/flashPitch.wav": "/hackgt9/static/media/flashPitch.9aadee02a36ad26003de.wav",
+    "static/media/migosPitch.wav": "/hackgt9/static/media/migosPitch.31b7493968456b9f5cdb.wav",
+    "static/media/africaBassDrums.wav": "/hackgt9/static/media/africaBassDrums.b721a2abfdf0d5860467.wav",
+    "static/media/africaChorus.wav": "/hackgt9/static/media/africaChorus.134a5d15aaa1911fffeb.wav",
+    "static/media/fireworkBassDrums.wav": "/hackgt9/static/media/fireworkBassDrums.b9cf42a4b5ab2f48402a.wav",
+    "static/media/fireworkChorus.wav": "/hackgt9/static/media/fireworkChorus.6e30ef734d2de0560456.wav",
+    "static/media/flashBassDrums.wav": "/hackgt9/static/media/flashBassDrums.5e8f697e425c782b2359.wav",
+    "static/media/flashChorus.wav": "/hackgt9/static/media/flashChorus.bb5ba74ae40c46c7acf1.wav",
+    "static/media/migosBassDrums.wav": "/hackgt9/static/media/migosBassDrums.5fbba9c816099280a6ee.wav",
+    "static/media/migosChorus.wav": "/hackgt9/static/media/migosChorus.98d9f4787b6292f8181f.wav",
+    "static/media/migosRemix.wav": "/hackgt9/static/media/migosRemix.c0fe283936c4297bb8bb.wav",
+    "static/media/flashRemix.wav": "/hackgt9/static/media/flashRemix.4b1faf6b56231e404fa5.wav",
+    "static/media/fireworkRemix.wav": "/hackgt9/static/media/fireworkRemix.9e150a6c8066c841e29c.wav",
+    "static/media/africaRemix.wav": "/hackgt9/static/media/africaRemix.634700daad022d92488d.wav",
+    "index.html": "/hackgt9/index.html",
+    "main.2ae93dbc.css.map": "/hackgt9/static/css/main.2ae93dbc.css.map",
+    "main.4b262158.js.map": "/hackgt9/static/js/main.4b262158.js.map",
+    "787.e7b55d14.chunk.js.map": "/hackgt9/static/js/787.e7b55d14.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ae93dbc.css",
+    "static/js/main.4b262158.js"
+  ]
+}
