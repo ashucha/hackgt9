@@ -11,4 +11,6 @@ input:focus {
 	font-size: 2rem;
 	text-transform: uppercase;
 	overflow-x: scroll;
+	caret-color: transparent;
+	/* pointer-events: none; */
 }
