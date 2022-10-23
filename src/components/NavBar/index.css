@@ -1,0 +1,13 @@
+.navbar {
+  width: 100%;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-evenly !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  text-align: right;
+  font-size:x-large; 
+}
