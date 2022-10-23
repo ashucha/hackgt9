@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 
+import { motion } from "framer-motion";
+
 import "./index.css";
-import {motion} from 'framer-motion'
 
 const DynamicIsland = (props) => {
 	const [width, setWidth] = useState(1);
@@ -46,18 +47,22 @@ const DynamicIsland = (props) => {
 	};
 
 	return (
-		<motion.div animate={{x: props.move ? 10 : 0}} transition={{type: 'spring', bounce: 2}}>
-		<input
-			ref={inputRef}
-			disabled={disable}
-			style={{ width: width + "ch" }}
-			type="text"
-			autoFocus
-			onChange={changeHandler}
-			onKeyDown={enterHandler}
-			id="island"
-			className="rounded-0 bg-dark"
-		/>
+		<motion.div
+			animate={{ x: props.move ? 10 : 0 }}
+			transition={{ type: "spring", bounce: 2 }}
+		>
+			<input
+				ref={inputRef}
+				disabled={disable}
+				style={{ width: width + "ch" }}
+				type="text"
+				autoFocus
+				onChange={changeHandler}
+				onKeyDown={enterHandler}
+				id="island"
+				className="rounded-0 bg-dark"
+				value={guess}
+			/>
 		</motion.div>
 	);
 };
