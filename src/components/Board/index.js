@@ -30,6 +30,8 @@ import fireworkBassDrums from './fireworkChorus/fireworkBassDrums.wav'
 import fireworkVocals from './fireworkChorus/fireworkVocals.wav'
 import fireworkChorus from './fireworkChorus/fireworkChorus.wav'
 
+import {motion} from 'framer-motion'
+
 const Board = () => {
 	const migos = [migosPitch, migosBassDrums, migosOther, migosVocals, migosRemix, migosChorus]
 	const flash = [flashPitch, flashBassDrums, flashOther, flashVocals, flashRemix, flashChorus]
@@ -43,6 +45,8 @@ const Board = () => {
 	const [currentSong, setCurrentSong] = useState(currentSongArray[index]);
 	const answers = ['WALK IT LIKE I TALK IT', 'FLASHING LIGHTS', 'AFRICA', 'FIREWORK']
 
+	const [move, setMove] = useState(false);
+
 
 
 
@@ -54,6 +58,7 @@ const Board = () => {
 				setNumGuesses(numGuesses + 1);
 				setCurrentSong(currentSongArray[index+1]);
 				setIndex(index+1)
+				setMove(!move);
 				
 			} else if (numGuesses === 6) {
 				alert("Sorry, you lost. Better luck next time!");
@@ -63,7 +68,7 @@ const Board = () => {
 
 	return (
 		<div className="island-container">
-			{Array(numGuesses).fill(<DynamicIsland enterPressed={enterHandler}/>)}
+			{Array(numGuesses).fill(<DynamicIsland enterPressed={enterHandler} move={move} setMove={setMove}/>)}
 
 			<div>
 				<audio src={currentSong} controls></audio>

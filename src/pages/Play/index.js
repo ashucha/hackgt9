@@ -5,7 +5,6 @@ import Keyboard from "../../components/Keyboard";
 
 const Play = () => {
 	const getKey = (data) => {
-		console.log(data);
 	};
 
 	return (
