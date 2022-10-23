@@ -30,34 +30,37 @@ import fireworkBassDrums from "./fireworkChorus/fireworkBassDrums.wav";
 import fireworkVocals from "./fireworkChorus/fireworkVocals.wav";
 import fireworkChorus from "./fireworkChorus/fireworkChorus.wav";
 
+import WinModal from "../../components/WinModal";
+import LoseModal from "../../components/LoseModal";
+
 const Board = (props) => {
 	const migos = [
-		migosPitch,
 		migosBassDrums,
+		migosPitch,
 		migosOther,
 		migosVocals,
 		migosRemix,
 		migosChorus,
 	];
 	const flash = [
-		flashPitch,
 		flashBassDrums,
+		flashPitch,
 		flashOther,
 		flashVocals,
 		flashRemix,
 		flashChorus,
 	];
 	const africa = [
-		africaPitch,
 		africaBassDrums,
+		africaPitch,
 		africaOther,
 		africaVocals,
 		africaRemix,
 		africaChorus,
 	];
 	const firework = [
-		fireworkPitch,
 		fireworkBassDrums,
+		fireworkPitch,
 		fireworkOther,
 		fireworkVocals,
 		fireworkRemix,
@@ -77,11 +80,14 @@ const Board = (props) => {
 		"FIREWORK",
 	];
 
+	const [showWinModal, setShowWinModal] = useState(false);
+	const [showLoseModal, setShowLoseModal] = useState(false);
+
 	const [move, setMove] = useState(false);
 
 	const enterHandler = (data) => {
 		if (data.guess.toUpperCase() === answers[randomIndex]) {
-			alert("Correct");
+			setShowWinModal(true);
 		} else {
 			if (numGuesses < 6) {
 				setNumGuesses(numGuesses + 1);
@@ -89,7 +95,7 @@ const Board = (props) => {
 				setIndex(index + 1);
 				setMove(!move);
 			} else if (numGuesses === 6) {
-				alert("Sorry, you lost. Better luck next time!");
+				setShowLoseModal(true);
 			}
 		}
 	};
@@ -107,6 +113,8 @@ const Board = (props) => {
 			<div>
 				<audio src={currentSong} controls></audio>
 			</div>
+			{showWinModal && <WinModal></WinModal>}
+			{showLoseModal && <LoseModal></LoseModal>}
 		</div>
 	);
 };
