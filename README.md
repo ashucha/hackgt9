@@ -35,7 +35,7 @@
     ·
     <a href="https://github.com/ashucha/hackgt9/issues/new/choose" title="🐛Report Bug/🎊Request Feature">🚀 Got Issue</a>
     .
-    <a href="https://por-flavor-0.herokuapp.com/" title="Soundle">Website</a>
+    <a href="https://ashucha.github.io/hackgt9/" title="Soundle">Website</a>
 </p>
 
 ## 🚀 Features
