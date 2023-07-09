@@ -86,9 +86,9 @@ const Board = (props) => {
 	const [move, setMove] = useState(false);
 
 	const enterHandler = (data) => {
-		if (data.guess.toUpperCase() === answers[randomIndex]) {
+		if (data.guess && data.guess.toUpperCase() === answers[randomIndex]) {
 			setShowWinModal(true);
-		} else {
+		} else if (data !== true) {
 			if (numGuesses < 6) {
 				setNumGuesses(numGuesses + 1);
 				setCurrentSong(currentSongArray[index + 1]);

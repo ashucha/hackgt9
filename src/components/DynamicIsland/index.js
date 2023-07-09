@@ -13,10 +13,30 @@ const DynamicIsland = (props) => {
 
 	useEffect(() => {
 		if (!disable && props.typedCharData) {
-			inputRef.current.value = guess + props.typedCharData.newChar;
-			setGuess(guess + props.typedCharData.newChar);
+			const newChar = props.typedCharData.newChar;
+			let delWidth = 1;
+			if (newChar === "Enter") {
+				const enterEvent = new KeyboardEvent("keydown", {
+					code: "Enter",
+					key: "Enter",
+				});
+				Object.defineProperty(enterEvent, "data", {
+					writable: false,
+					value: guess,
+				});
+				enterHandler(enterEvent);
+				delWidth = 0;
+			} else if (newChar === "Backspace") {
+				setGuess(inputRef.current.value.slice(0, -1));
+				delWidth = guess.length > 1 ? -1 : 0;
+			} else if (newChar === "Space") {
+				setGuess(inputRef.current.value + " ");
+			} else {
+				inputRef.current.value = guess + newChar;
+				setGuess(guess + newChar);
+			}
 			inputRef.current.focus();
-			setWidth(guess.length > 0 ? width + 1 : 1);
+			setWidth(guess.length > 0 ? width + delWidth : 1);
 		}
 	}, [props.typedCharData]);
 
@@ -32,14 +52,14 @@ const DynamicIsland = (props) => {
 			e.preventDefault();
 		}
 
-		if (e.key === "Enter" && e.target.value.trim().length > 0) {
-			props.enterPressed({ enterPressed: true, guess: e.target.value.trim() });
+		if (e.key === "Enter" && guess.trim().length > 0) {
+			props.enterPressed({ enterPressed: true, guess: guess.trim() });
 			setDisable(true);
 			if (props.typedCharData) {
 				props.typedCharData.newChar = "";
 			}
 			props.enterPressed(true);
-		} else if (e.key === "Enter" && e.target.value.trim().length === 0) {
+		} else if (e.key === "Enter" && guess.trim().length === 0) {
 			setWidth(1);
 			inputRef.current.value = "";
 			setGuess("");
