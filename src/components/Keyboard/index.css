@@ -6,12 +6,16 @@
 }
 
 .keyboard-key {
-	width: 50px;
-	height: 50px;
+	width: 45px;
+	height: 45px;
 	margin: 3px;
 	font-weight: 700;
 }
 
 .keyboard-key-wide {
 	width: 75px;
+}
+
+.keyboard-key-full {
+	width: 20%;
 }

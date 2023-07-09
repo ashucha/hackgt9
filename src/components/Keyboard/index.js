@@ -9,6 +9,10 @@ const Keyboard = (props) => {
 		props.keyPressed({ newChar: e.target.innerText, time: Date.now() });
 	};
 
+	const handleSpecialClick = (e, data) => {
+		props.keyPressed({ newChar: data, time: Date.now() });
+	};
+
 	return (
 		<div>
 			<Container className="keyboard-container text-center">
@@ -74,7 +78,10 @@ const Keyboard = (props) => {
 					</Button>
 				</div>
 				<div className="keyboard-row">
-					<Button className="keyboard-key keyboard-key-wide">
+					<Button
+						className="keyboard-key keyboard-key-wide"
+						onClick={(e) => handleSpecialClick(e, "Enter")}
+					>
 						<span>ENTER</span>
 					</Button>
 					<Button className="keyboard-key" onClick={handleClick}>
@@ -98,7 +105,10 @@ const Keyboard = (props) => {
 					<Button className="keyboard-key" onClick={handleClick}>
 						<span>M</span>
 					</Button>
-					<Button className="keyboard-key keyboard-key-wide">
+					<Button
+						className="keyboard-key keyboard-key-wide"
+						onClick={(e) => handleSpecialClick(e, "Backspace")}
+					>
 						<span>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -114,6 +124,14 @@ const Keyboard = (props) => {
 								></path>
 							</svg>
 						</span>
+					</Button>
+				</div>
+				<div className="keyboard-row">
+					<Button
+						className="keyboard-key keyboard-key-full"
+						onClick={(e) => handleSpecialClick(e, "Space")}
+					>
+						<span>SPACE</span>
 					</Button>
 				</div>
 			</Container>
