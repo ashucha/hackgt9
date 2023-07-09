@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hackgt9/static/css/main.2ae93dbc.css",
-    "main.js": "/hackgt9/static/js/main.5319dcec.js",
+    "main.css": "/hackgt9/static/css/main.707d8358.css",
+    "main.js": "/hackgt9/static/js/main.d1116b50.js",
     "static/js/787.e7b55d14.chunk.js": "/hackgt9/static/js/787.e7b55d14.chunk.js",
     "static/media/africaOther.wav": "/hackgt9/static/media/africaOther.e457a92ce1ce35a3dea7.wav",
     "static/media/africaVocals.wav": "/hackgt9/static/media/africaVocals.a2478270dcb864903035.wav",
@@ -28,12 +28,12 @@
     "static/media/fireworkRemix.wav": "/hackgt9/static/media/fireworkRemix.9e150a6c8066c841e29c.wav",
     "static/media/africaRemix.wav": "/hackgt9/static/media/africaRemix.634700daad022d92488d.wav",
     "index.html": "/hackgt9/index.html",
-    "main.2ae93dbc.css.map": "/hackgt9/static/css/main.2ae93dbc.css.map",
-    "main.5319dcec.js.map": "/hackgt9/static/js/main.5319dcec.js.map",
+    "main.707d8358.css.map": "/hackgt9/static/css/main.707d8358.css.map",
+    "main.d1116b50.js.map": "/hackgt9/static/js/main.d1116b50.js.map",
     "787.e7b55d14.chunk.js.map": "/hackgt9/static/js/787.e7b55d14.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ae93dbc.css",
-    "static/js/main.5319dcec.js"
+    "static/css/main.707d8358.css",
+    "static/js/main.d1116b50.js"
   ]
 }
